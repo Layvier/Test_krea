@@ -213,15 +213,13 @@ export default {
         },
         watch : {
             savingsPerMonth : function(){
-                console.log("watch");
                 this.updateChart();
             }
         },
         methods : {
             updateChart : function(){
-                console.log('update chart');
                 var data = {
-                    labels: ["Month 1", "Month 2", "Month 3", "Month 4", "Month 12"],
+                    labels: ["Month 1", "Month 2", "Month 3", "Month 4", "1 Year"],
                     datasets: [{
                             label: "Online",
                             backgroundColor: 'rgba(255, 99, 132, 0.2)',
@@ -237,13 +235,6 @@ export default {
                         }
             ]};
             var opt = {
-                scales: {
-                    xAxes: [{
-                        ticks: {
-                            beginAtZero:true
-                        }
-                    }]
-                },
                 animation : {
                     duration : 0
                 }
